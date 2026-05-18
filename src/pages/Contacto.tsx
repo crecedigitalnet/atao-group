@@ -268,7 +268,7 @@ const Contacto = () => {
                     ¿Necesitas respuesta inmediata? Contáctanos por WhatsApp
                   </p>
                   <a
-                    href="https://wa.me/51999999999"
+                    href="https://wa.me/51986722623"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
