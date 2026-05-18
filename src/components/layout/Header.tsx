@@ -53,12 +53,12 @@ const Header = () => {
             <Button variant="ghost" size="icon">
               <Search className="h-5 w-5" />
             </Button>
-            <a href="tel:+51999999999">
+            <a href="tel:+51986722623">
               <Button variant="ghost" size="icon">
                 <Phone className="h-5 w-5" />
               </Button>
             </a>
-            <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/51986722623" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <MessageCircle className="h-5 w-5" />
               </Button>

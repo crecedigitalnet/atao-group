@@ -114,7 +114,7 @@ const Contacto = () => {
                         <Input
                           id="telefono"
                           type="tel"
-                          placeholder="+51 999 999 999"
+                          placeholder="+51 986 722 623"
                           value={formData.telefono}
                           onChange={(e) => handleChange("telefono", e.target.value)}
                           required
@@ -222,10 +222,10 @@ const Contacto = () => {
                     <div>
                       <p className="font-semibold">Teléfono</p>
                       <a
-                        href="tel:+51999999999"
+                        href="tel:+51986722623"
                         className="text-sm text-muted-foreground hover:text-primary"
                       >
-                        +51 999 999 999
+                        +51 986 722 623
                       </a>
                     </div>
                   </div>
@@ -268,7 +268,7 @@ const Contacto = () => {
                     ¿Necesitas respuesta inmediata? Contáctanos por WhatsApp
                   </p>
                   <a
-                    href="https://wa.me/51999999999"
+                    href="https://wa.me/51986722623"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
