@@ -18,7 +18,7 @@ const Hero = () => (
       width={1600}
       height={1104}
       className="absolute inset-0 h-full w-full object-cover"
-      fetchPriority="high"
+      fetchpriority="high"
     />
     <div className="absolute inset-0 bg-gradient-hero" aria-hidden="true" />
     <div className="absolute inset-0 bg-gradient-mesh opacity-70" aria-hidden="true" />
