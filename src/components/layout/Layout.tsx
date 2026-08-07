@@ -6,14 +6,14 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
-  );
-};
+const Layout = ({ children }: LayoutProps) => (
+  <div className="flex min-h-dvh flex-col bg-background">
+    <Header />
+    <main id="contenido" className="flex-1">
+      {children}
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Layout;

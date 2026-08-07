@@ -1,237 +1,99 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Users, Building, Award, TrendingUp, Heart } from "lucide-react";
-import warehouseImage from "@/assets/warehouse.jpg";
+import PageHero from "@/components/site/PageHero";
+import SectionHeading from "@/components/site/SectionHeading";
+import Reveal from "@/components/site/Reveal";
+import FinalCta from "@/components/home/FinalCta";
+import { Target, Compass, Users, Globe2 } from "lucide-react";
+import warehouse from "@/assets/warehouse.jpg";
 
-const Nosotros = () => {
-  const timeline = [
-    { year: "2015", event: "Fundación de ATAO Group" },
-    { year: "2017", event: "Expansión a cobertura nacional" },
-    { year: "2019", event: "Certificación ISO 9001" },
-    { year: "2021", event: "Más de 500 clientes atendidos" },
-    { year: "2024", event: "Líderes en equipamiento médico B2B/B2G" },
-  ];
+const values = [
+  { icon: Target, title: "Responsabilidad sobre el resultado", text: "Nos medimos por la tracción comercial de las marcas que representamos, no por actividades aisladas." },
+  { icon: Compass, title: "Criterio antes que promesa", text: "Evaluamos viabilidad regulatoria y comercial antes de comprometer plazos o inversión." },
+  { icon: Users, title: "Un equipo, una relación", text: "Un solo interlocutor estratégico coordina regulación, operación y comercialización." },
+  { icon: Globe2, title: "Mirada internacional, ejecución local", text: "Entendemos los estándares de un fabricante global y la realidad operativa del mercado peruano." },
+];
 
-  const team = [
-    {
-      area: "Comité Técnico",
-      description: "Especialistas en normativas y selección de equipamiento médico",
-      icon: Award,
-    },
-    {
-      area: "Área Comercial",
-      description: "Asesores dedicados para empresas y gobierno",
-      icon: Users,
-    },
-    {
-      area: "Operaciones y Logística",
-      description: "Garantizamos entregas oportunas en todo el país",
-      icon: Building,
-    },
-  ];
+const milestones = [
+  { year: "Origen", text: "Distribución especializada de equipamiento y suministros médicos en Perú." },
+  { year: "Expansión", text: "Red de tiendas físicas y canales digitales para llegar directo al comprador." },
+  { year: "Hoy", text: "Plataforma de Market Access as a Service para fabricantes nacionales e internacionales." },
+];
 
-  const coverage = [
-    "Lima y Callao",
-    "Norte: Piura, Chiclayo, Trujillo",
-    "Centro: Huancayo, Huánuco",
-    "Sur: Arequipa, Cusco, Tacna",
-    "Oriente: Iquitos, Pucallpa",
-  ];
+const Nosotros = () => (
+  <>
+    <PageHero
+      eyebrow="Nosotros"
+      title="Construimos la infraestructura comercial que los fabricantes ya no necesitan levantar."
+      description="ATAO Group nació en la distribución de tecnología médica y evolucionó hacia una plataforma integral de acceso al mercado peruano para fabricantes de dispositivos médicos y soluciones de bienestar."
+    />
 
-  return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              <Heart className="mr-2 h-4 w-4" />
-              Nuestra Historia
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Aliados de Confianza para Profesionales de la Salud
-            </h1>
-            <p className="text-xl text-white/90">
-              Más de una década comprometidos con la excelencia en equipamiento médico y
-              atención personalizada
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Purpose Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Nuestro Propósito
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                En ATAO Group, nos dedicamos a ser el aliado estratégico de instituciones
-                de salud, empresas, gobierno y profesionales médicos en todo el Perú.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Proveemos equipamiento médico certificado con el más alto estándar de
-                calidad, respaldado por asesoría técnica especializada y un servicio de
-                distribución nacional que garantiza entregas oportunas.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center space-x-2">
-                  <TrendingUp className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">+500 Clientes Satisfechos</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Award className="h-5 w-5 text-secondary" />
-                  <span className="font-semibold">Certificación ISO 9001</span>
-                </div>
+    <section className="section-pad bg-background">
+      <div className="container grid items-center gap-14 lg:grid-cols-2">
+        <Reveal>
+          <img
+            src={warehouse}
+            alt="Centro de operaciones y almacén de distribución de ATAO Group"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-3xl object-cover shadow-xl"
+          />
+        </Reveal>
+        <div>
+          <SectionHeading
+            eyebrow="Propósito"
+            title="Que la mejor tecnología médica llegue al Perú sin fricción."
+            description="Reducimos el costo, el tiempo y el riesgo de entrar a un mercado complejo, conectando fabricantes con clínicas, instituciones públicas, retail y pacientes."
+          />
+          <dl className="mt-10 grid grid-cols-2 gap-6">
+            {[
+              { v: "Nacional", l: "Cobertura de distribución" },
+              { v: "6", l: "Tiendas físicas" },
+              { v: "B2B · B2G · B2C", l: "Canales comerciales" },
+              { v: "End-to-end", l: "Alcance de la plataforma" },
+            ].map((m) => (
+              <div key={m.l} className="rounded-2xl border bg-card p-5">
+                <dt className="sr-only">{m.l}</dt>
+                <dd>
+                  <span className="block font-display text-xl font-semibold text-primary">{m.v}</span>
+                  <span className="mt-1 block text-sm text-muted-foreground">{m.l}</span>
+                </dd>
               </div>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <img
-                src={warehouseImage}
-                alt="Almacén ATAO Group"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Nuestra Trayectoria
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Una década de crecimiento y compromiso con la salud en el Perú
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20" />
-              
-              {timeline.map((item, index) => (
-                <div
-                  key={index}
-                  className={`relative flex items-center mb-8 ${
-                    index % 2 === 0 ? "justify-start" : "justify-end"
-                  }`}
-                >
-                  <Card
-                    className={`w-5/12 ${
-                      index % 2 === 0 ? "mr-auto" : "ml-auto"
-                    }`}
-                  >
-                    <CardHeader>
-                      <CardTitle className="text-2xl text-primary">
-                        {item.year}
-                      </CardTitle>
-                      <CardDescription className="text-base">
-                        {item.event}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Coverage Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Cobertura Nacional
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Presencia en las principales ciudades del Perú
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {coverage.map((region, index) => (
-              <Card key={index}>
-                <CardContent className="p-6 flex items-center space-x-3">
-                  <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
-                  <span className="font-medium">{region}</span>
-                </CardContent>
-              </Card>
             ))}
-          </div>
+          </dl>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Nuestro Equipo
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Profesionales comprometidos con la excelencia en el servicio
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <div className="h-16 w-16 rounded-full bg-gradient-primary flex items-center justify-center mx-auto mb-4">
-                    <member.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{member.area}</CardTitle>
-                  <CardDescription>{member.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
+    <section className="section-pad bg-surface">
+      <div className="container">
+        <SectionHeading eyebrow="Cómo trabajamos" title="Principios que sostienen cada decisión." />
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {values.map((v, i) => (
+            <Reveal key={v.title} delay={i * 90}>
+              <article className="surface-card h-full p-7">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <v.icon className="h-6 w-6" aria-hidden="true" />
+                </span>
+                <h3 className="mt-6 font-display text-lg font-semibold text-secondary">{v.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
+              </article>
+            </Reveal>
+          ))}
         </div>
-      </section>
 
-      {/* Infrastructure Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Infraestructura y Logística
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Instalaciones modernas y procesos optimizados
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
-                <CardHeader className="text-center">
-                  <CardTitle className="text-3xl text-primary">1,500m²</CardTitle>
-                  <CardDescription>Almacén climatizado</CardDescription>
-                </CardHeader>
-              </Card>
-              <Card>
-                <CardHeader className="text-center">
-                  <CardTitle className="text-3xl text-secondary">24-72h</CardTitle>
-                  <CardDescription>Tiempo de entrega estándar</CardDescription>
-                </CardHeader>
-              </Card>
-              <Card>
-                <CardHeader className="text-center">
-                  <CardTitle className="text-3xl text-accent">98%</CardTitle>
-                  <CardDescription>SLA de despacho cumplido</CardDescription>
-                </CardHeader>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        <ol className="mt-16 grid gap-6 md:grid-cols-3">
+          {milestones.map((m, i) => (
+            <Reveal as="li" key={m.year} delay={i * 100}>
+              <div className="h-full rounded-2xl border-l-4 border-accent bg-card p-7 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">{m.year}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <FinalCta />
+  </>
+);
 
 export default Nosotros;

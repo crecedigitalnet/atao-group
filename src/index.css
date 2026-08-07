@@ -1,96 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Figtree:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ATAO Group — Market Access as a Service design system.
+   All colors MUST be HSL. */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --surface: 197 62% 97%;
+    --foreground: 210 100% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 210 100% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 210 100% 12%;
 
-    /* Medical blue - professional and trustworthy */
-    --primary: 210 85% 42%;
+    /* #005F99 */
+    --primary: 202 100% 30%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 85% 92%;
-    
-    /* Health green */
-    --secondary: 155 65% 45%;
+    --primary-light: 202 70% 93%;
+
+    /* #003366 */
+    --secondary: 210 100% 20%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 155 55% 92%;
+    --secondary-light: 210 60% 92%;
 
-    /* Warm action orange */
-    --accent: 25 95% 53%;
+    /* #00B3B3 */
+    --accent: 180 100% 35%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 25 95% 94%;
+    --accent-light: 180 60% 93%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 197 62% 96%;
+    --muted-foreground: 205 20% 40%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 210 85% 42%;
+    --border: 202 35% 90%;
+    --input: 202 35% 88%;
+    --ring: 202 100% 30%;
 
-    --radius: 0.5rem;
+    --radius: 0.875rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 85% 42%) 0%, hsl(210 85% 32%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 85% 42%) 0%, hsl(195 85% 45%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 95% 58%) 100%);
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(210 85% 42% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(210 85% 42% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(210 85% 42% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(210 85% 42% / 0.15);
+    --gradient-primary: linear-gradient(135deg, hsl(202 100% 30%) 0%, hsl(210 100% 20%) 100%);
+    --gradient-hero: linear-gradient(120deg, hsl(210 100% 14% / 0.94) 0%, hsl(202 100% 24% / 0.88) 45%, hsl(180 100% 25% / 0.72) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 35%) 0%, hsl(202 100% 30%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(197 62% 97%) 100%);
+    --gradient-mesh: radial-gradient(60% 60% at 15% 20%, hsl(180 100% 35% / 0.18) 0%, transparent 60%),
+      radial-gradient(50% 50% at 85% 10%, hsl(202 100% 30% / 0.18) 0%, transparent 60%);
 
-    /* Transitions */
+    --shadow-sm: 0 1px 2px 0 hsl(210 100% 20% / 0.06);
+    --shadow-md: 0 8px 24px -12px hsl(210 100% 20% / 0.22);
+    --shadow-lg: 0 18px 44px -18px hsl(210 100% 20% / 0.28);
+    --shadow-xl: 0 32px 70px -24px hsl(210 100% 20% / 0.32);
+    --shadow-glow: 0 0 0 1px hsl(180 100% 35% / 0.18), 0 24px 60px -28px hsl(180 100% 35% / 0.55);
+
     --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .dark {
-    --background: 215 28% 10%;
-    --foreground: 210 40% 98%;
+    --background: 210 60% 7%;
+    --surface: 210 50% 10%;
+    --foreground: 197 60% 97%;
 
-    --card: 215 25% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 50% 11%;
+    --card-foreground: 197 60% 97%;
 
-    --popover: 215 28% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 55% 9%;
+    --popover-foreground: 197 60% 97%;
 
-    --primary: 210 85% 55%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 210 85% 20%;
+    --primary: 199 90% 55%;
+    --primary-foreground: 210 100% 10%;
+    --primary-light: 202 60% 18%;
 
-    --secondary: 155 65% 50%;
+    --secondary: 210 60% 24%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 155 55% 18%;
+    --secondary-light: 210 45% 18%;
 
-    --accent: 25 95% 60%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 25 95% 20%;
+    --accent: 180 80% 45%;
+    --accent-foreground: 210 100% 10%;
+    --accent-light: 180 50% 16%;
 
-    --muted: 215 25% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 40% 16%;
+    --muted-foreground: 200 20% 72%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 210 85% 55%;
+    --border: 210 35% 20%;
+    --input: 210 35% 22%;
+    --ring: 180 80% 45%;
   }
 }
 
@@ -99,7 +100,67 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background rounded-sm;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.25);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border bg-card shadow-[var(--shadow-md)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lg)];
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-light px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary;
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    html { scroll-behavior: auto; }
   }
 }
