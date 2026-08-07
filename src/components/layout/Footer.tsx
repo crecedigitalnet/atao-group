@@ -1,125 +1,104 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, ArrowUpRight } from "lucide-react";
+
+const columns = [
+  {
+    title: "Plataforma",
+    links: [
+      { label: "Market Access as a Service", to: "/market-access" },
+      { label: "Servicios", to: "/servicios" },
+      { label: "Calidad y cumplimiento", to: "/calidad" },
+      { label: "Catálogo", to: "/catalogo" },
+    ],
+  },
+  {
+    title: "Compañía",
+    links: [
+      { label: "Nosotros", to: "/nosotros" },
+      { label: "Partners", to: "/partners" },
+      { label: "Casos de éxito", to: "/casos-de-exito" },
+      { label: "Contacto", to: "/contacto" },
+    ],
+  },
+  {
+    title: "Para fabricantes",
+    links: [
+      { label: "Agenda una reunión estratégica", to: "/contacto" },
+      { label: "Diagnóstico de acceso al mercado", to: "/contacto?tipo=diagnostico" },
+      { label: "Cómo funciona", to: "/market-access#como-funciona" },
+      { label: "Preguntas frecuentes", to: "/market-access#faq" },
+    ],
+  },
+];
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+    <footer className="relative overflow-hidden bg-secondary text-secondary-foreground">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-mesh opacity-60" aria-hidden="true" />
+      <div className="container relative py-16 md:py-20">
+        <div className="grid gap-12 lg:grid-cols-[1.3fr_repeat(3,1fr)]">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="h-10 w-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <span className="text-xl font-bold text-primary-foreground">AG</span>
-              </div>
-              <div>
-                <span className="text-lg font-bold text-primary">ATAO Group</span>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Equipos médicos confiables para empresas, gobierno y profesionales en todo el Perú.
+            <Link to="/" className="flex items-center gap-3">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-sm font-bold backdrop-blur">
+                AG
+              </span>
+              <span className="font-display text-xl font-semibold">ATAO Group</span>
+            </Link>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-secondary-foreground/75">
+              Market Access as a Service: importación, regulación, distribución, retail y canales digitales
+              integrados en una sola plataforma para fabricantes de tecnología médica que crecen en Perú.
             </p>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <p>RUC: 20XXXXXXXXX</p>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold mb-4">Enlaces Rápidos</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/nosotros" className="text-muted-foreground hover:text-primary transition-colors">
-                  Nosotros
-                </Link>
+            <ul className="mt-6 space-y-3 text-sm text-secondary-foreground/80">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" aria-hidden="true" />
+                Lima, Perú · Cobertura nacional
               </li>
-              <li>
-                <Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">
-                  Servicios
-                </Link>
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 flex-shrink-0 text-accent" aria-hidden="true" />
+                <a href="tel:+51986722623" className="hover:text-accent">+51 986 722 623</a>
               </li>
-              <li>
-                <Link to="/calidad" className="text-muted-foreground hover:text-primary transition-colors">
-                  Calidad
-                </Link>
-              </li>
-              <li>
-                <Link to="/catalogo" className="text-muted-foreground hover:text-primary transition-colors">
-                  Catálogo
-                </Link>
-              </li>
-              <li>
-                <Link to="/contacto" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contáctanos
-                </Link>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 flex-shrink-0 text-accent" aria-hidden="true" />
+                <a href="mailto:contacto@ataogroup.pe" className="hover:text-accent">contacto@ataogroup.pe</a>
               </li>
             </ul>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-full border border-white/20 px-4 text-sm transition-colors hover:bg-white/10"
+            >
+              <Linkedin className="h-4 w-4" aria-hidden="true" />
+              LinkedIn
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold mb-4">Contacto</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  Lima, Perú - Cobertura Nacional
-                </span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="tel:+51986722623" className="text-muted-foreground hover:text-primary transition-colors">
-                  +51 986 722 623
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="mailto:contacto@ataogroup.pe" className="text-muted-foreground hover:text-primary transition-colors">
-                  contacto@ataogroup.pe
-                </a>
-              </li>
-              <li className="flex items-start space-x-2">
-                <Clock className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  Lun - Vie: 8:00 AM - 6:00 PM<br />
-                  Sáb: 9:00 AM - 1:00 PM
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Certifications */}
-          <div>
-            <h3 className="font-semibold mb-4">Certificaciones</h3>
-            <div className="space-y-3">
-              <div className="bg-background p-3 rounded-lg border">
-                <p className="text-xs text-muted-foreground">Registros Sanitarios</p>
-                <p className="text-sm font-semibold text-primary">DIGEMID</p>
-              </div>
-              <div className="bg-background p-3 rounded-lg border">
-                <p className="text-xs text-muted-foreground">Calidad Certificada</p>
-                <p className="text-sm font-semibold text-primary">ISO 9001</p>
-              </div>
-            </div>
-          </div>
+          {columns.map((column) => (
+            <nav key={column.title} aria-label={column.title}>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">{column.title}</h2>
+              <ul className="mt-5 space-y-3 text-sm">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.to} className="text-secondary-foreground/80 transition-colors hover:text-accent">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} ATAO Group SAC. Todos los derechos reservados.
-            </p>
-            <div className="flex space-x-4 text-sm">
-              <Link to="/terminos" className="text-muted-foreground hover:text-primary transition-colors">
-                Términos
-              </Link>
-              <Link to="/privacidad" className="text-muted-foreground hover:text-primary transition-colors">
-                Privacidad
-              </Link>
-            </div>
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-secondary-foreground/70 md:flex-row md:items-center md:justify-between">
+          <p>© {year} ATAO Group SAC. Todos los derechos reservados.</p>
+          <div className="flex flex-wrap gap-6">
+            <Link to="/calidad" className="hover:text-accent">Calidad</Link>
+            <Link to="/contacto" className="hover:text-accent">Contacto</Link>
+            <Link to="/terminos" className="hover:text-accent">Términos</Link>
+            <Link to="/privacidad" className="hover:text-accent">Privacidad</Link>
           </div>
         </div>
       </div>
