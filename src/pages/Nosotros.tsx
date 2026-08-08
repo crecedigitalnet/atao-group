@@ -21,12 +21,12 @@ const milestones = [
 ];
 
 const stores = [
-  { city: "Piura", address: "Av. Bolognesi 332", region: "Piura" },
-  { city: "Lima", address: "Paseo Los Eucaliptos 826, Urb. Los Cactus", region: "La Molina — Lima" },
-  { city: "Andahuaylas", address: "Av. Perú 382", region: "Andahuaylas — Apurímac" },
-  { city: "Andahuaylas", address: "Jirón Hugo Pesce 210", region: "Andahuaylas — Apurímac" },
-  { city: "Abancay", address: "Jirón Arica 105", region: "Abancay — Apurímac" },
-  { city: "Huancayo", address: "Jirón Puno 614", region: "Huancayo" },
+  { city: "Piura", address: "Av. Bolognesi 332", region: "Piura", mapUrl: "https://www.google.com/maps/place/Av.+Bolognesi+332,+Piura+20001/@-5.1998809,-80.6306277,17z/data=!3m1!4b1!4m6!3m5!1s0x904a1080c71bbf87:0x9f7de3b7215ec4af!8m2!3d-5.1998862!4d-80.6280528!16s%2Fg%2F11hzb2sfsx?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" },
+  { city: "Lima", address: "Paseo Los Eucaliptos 826, Urb. Los Cactus", region: "La Molina — Lima", mapUrl: "https://www.google.com/maps/place/Jr.+P.%C2%BA+de+los+Eucaliptos+826,+Lima+15023/@-12.0674039,-76.9668125,17z/data=!3m1!4b1!4m6!3m5!1s0x9105c658e6b2782f:0x5e853a09846f8c50!8m2!3d-12.0674039!4d-76.9668125!16s%2Fg%2F11rp3b7rtg?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" },
+  { city: "Andahuaylas", address: "Av. Perú 382", region: "Andahuaylas — Apurímac", mapUrl: "https://www.google.com/maps/place/Av.+Peru+382,+Andahuaylas+03701/@-13.6562966,-73.385974,17z/data=!3m1!4b1!4m6!3m5!1s0x916d2bc559d63173:0xceae4b08ef17d057!8m2!3d-13.6563018!4d-73.3833991!16s%2Fg%2F11jymw8ylh?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" },
+  { city: "Andahuaylas", address: "Jirón Hugo Pesce 210", region: "Andahuaylas — Apurímac", mapUrl: "https://www.google.com/maps/place/Jir%C3%B3n+Hugo+Pesce+210,+Andahuaylas+03701/@-13.6569189,-73.3845568,17z/data=!3m1!4b1!4m5!3m4!1s0x916d2bd005cbf8a1:0x3224906c1dee804f!8m2!3d-13.6569241!4d-73.3819819?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" },
+  { city: "Abancay", address: "Jirón Arica 105", region: "Abancay — Apurímac", mapUrl: "https://www.google.com/maps/place/Jr.+Arica+105,+Abancay+03001/@-13.6359943,-72.8855645,17z/data=!3m1!4b1!4m6!3m5!1s0x916d02ded1640b97:0x6bba14c12274c5d4!8m2!3d-13.6359996!4d-72.8806936!16s%2Fg%2F11jb6xr39h?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" },
+  { city: "Huancayo", address: "Jirón Puno 614", region: "Huancayo", mapUrl: "https://www.google.com/maps/place/Jir%C3%B3n+Puno+614,+Huancayo+12001/@-12.0682499,-75.2166977,17z/data=!3m1!4b1!4m9!1m2!2m1!1sJir%C3%B3n+Puno+614+,+Huancayo!3m5!1s0x910e964f773d3469:0x8a52a8036968f80!8m2!3d-12.0682552!4d-75.2118268!15sChpKaXLDs24gUHVubyA2MTQgLCBIdWFuY2F5b5IBEGdlb2NvZGVkX2FkZHJlc3PgAQA?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" },
 ];
 
 const team = [
