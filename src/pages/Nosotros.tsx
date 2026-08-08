@@ -2,7 +2,7 @@ import PageHero from "@/components/site/PageHero";
 import SectionHeading from "@/components/site/SectionHeading";
 import Reveal from "@/components/site/Reveal";
 import FinalCta from "@/components/home/FinalCta";
-import { Target, Compass, Users, Globe2 } from "lucide-react";
+import { Target, Compass, Users, Globe2, MapPin, Building2, Briefcase, Truck } from "lucide-react";
 import warehouse from "@/assets/warehouse.jpg";
 
 const values = [
@@ -13,10 +13,34 @@ const values = [
 ];
 
 const milestones = [
-  { year: "Origen", text: "Distribución especializada de equipamiento y suministros médicos en Perú." },
-  { year: "Expansión", text: "Red de tiendas físicas y canales digitales para llegar directo al comprador." },
-  { year: "Hoy", text: "Plataforma de Market Access as a Service para fabricantes nacionales e internacionales." },
+  { year: "2015", text: "Fundación de ATAO Group." },
+  { year: "2017", text: "Expansión a cobertura nacional." },
+  { year: "2019", text: "Certificación ISO 9001." },
+  { year: "2021", text: "Más de 500 clientes atendidos." },
+  { year: "2024", text: "Líderes en equipamiento médico B2B/B2G." },
 ];
+
+const stores = [
+  { city: "Piura", address: "Av. Bolognesi 332", region: "Piura" },
+  { city: "Lima", address: "Paseo Los Eucaliptos 826, Urb. Los Cactus", region: "La Molina — Lima" },
+  { city: "Andahuaylas", address: "Av. Perú 382", region: "Andahuaylas — Apurímac" },
+  { city: "Andahuaylas", address: "Jirón Hugo Pesce 210", region: "Andahuaylas — Apurímac" },
+  { city: "Abancay", address: "Jirón Arica 105", region: "Abancay — Apurímac" },
+  { city: "Huancayo", address: "Jirón Puno 614", region: "Huancayo" },
+];
+
+const team = [
+  { icon: Building2, title: "Comité Técnico", text: "Especialistas en normativas y selección de equipamiento médico." },
+  { icon: Briefcase, title: "Área Comercial", text: "Asesores dedicados para empresas y gobierno." },
+  { icon: Truck, title: "Operaciones y Logística", text: "Garantizamos entregas oportunas en todo el país." },
+];
+
+const infrastructure = [
+  { v: "1,500 m²", l: "Almacén climatizado" },
+  { v: "24-72 h", l: "Tiempo de entrega estándar" },
+  { v: "98%", l: "SLA de despacho cumplido" },
+];
+
 
 const Nosotros = () => (
   <>
