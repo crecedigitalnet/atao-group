@@ -2,7 +2,7 @@ import PageHero from "@/components/site/PageHero";
 import SectionHeading from "@/components/site/SectionHeading";
 import Reveal from "@/components/site/Reveal";
 import FinalCta from "@/components/home/FinalCta";
-import { Target, Compass, Users, Globe2, MapPin, Building2, Briefcase, Truck } from "lucide-react";
+import { Target, Compass, Users, Globe2, MapPin, Building2, Briefcase, Truck, ExternalLink } from "lucide-react";
 import warehouse from "@/assets/warehouse.jpg";
 
 const values = [
