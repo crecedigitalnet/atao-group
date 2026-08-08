@@ -1,5 +1,6 @@
 import Hero from "@/components/home/Hero";
 import PartnersStrip from "@/components/home/PartnersStrip";
+import PartnersAndClients from "@/components/home/PartnersAndClients";
 import ProblemSection from "@/components/home/ProblemSection";
 import BeforeAfter from "@/components/home/BeforeAfter";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -18,6 +19,7 @@ const Inicio = () => (
     <HowItWorks />
     <PlatformEcosystem />
     <Differentiators />
+    <PartnersAndClients />
     <CaseStudies />
     <FaqSection />
     <FinalCta />
