@@ -2,6 +2,7 @@ import PageHero from "@/components/site/PageHero";
 import SectionHeading from "@/components/site/SectionHeading";
 import Reveal from "@/components/site/Reveal";
 import FinalCta from "@/components/home/FinalCta";
+import PartnersAndClients from "@/components/home/PartnersAndClients";
 import { Factory, Building2, Landmark, Store, ShoppingBag, Truck } from "lucide-react";
 
 const ecosystem = [
@@ -48,6 +49,7 @@ const Partners = () => (
       </div>
     </section>
 
+    <PartnersAndClients />
     <FinalCta />
   </>
 );
