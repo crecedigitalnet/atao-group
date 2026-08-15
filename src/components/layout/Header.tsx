@@ -192,6 +192,11 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
+              <Button asChild variant="outline" size="lg" className="w-full rounded-full">
+                <a href="https://qurago.odoo.com/" target="_blank" rel="noopener noreferrer">
+                  Ir a Tienda
+                </a>
+              </Button>
               <Button asChild variant="hero" size="lg" className="mt-3 w-full rounded-full">
                 <Link to="/contacto">Agenda una reunión</Link>
               </Button>
