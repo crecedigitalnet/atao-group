@@ -18,7 +18,7 @@ const nodes = [
   { icon: ShoppingBag, label: "Marketplace", text: "Presencia en los canales digitales donde compra la categoría." },
   { icon: Store, label: "Retail", text: "Red de tiendas físicas para exposición y venta directa." },
   { icon: Megaphone, label: "Marketing", text: "Activación de demanda con contenidos y campañas segmentadas." },
-  { icon: Handshake, label: "Ventas B2B · B2G", text: "Gestión comercial con clínicas, corporativos y sector público." },
+  { icon: Handshake, label: "Ventas B2B · B2C · B2G", text: "Gestión comercial con clínicas, corporativos, consumidores y sector público." },
   { icon: BarChart3, label: "Analytics", text: "Medición de desempeño por canal para priorizar el escalamiento." },
 ];
 
