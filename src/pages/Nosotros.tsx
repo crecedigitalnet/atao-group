@@ -13,11 +13,11 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2015", text: "Fundación de ATAO Group." },
-  { year: "2017", text: "Expansión a cobertura nacional." },
-  { year: "2019", text: "Certificación ISO 9001." },
-  { year: "2021", text: "Más de 500 clientes atendidos." },
-  { year: "2024", text: "Líderes en equipamiento médico B2B/B2G." },
+  { year: "2010", text: "Producción y fabricación de equipamiento ortopédico." },
+  { year: "2016", text: "Fundación de ATAO Group S.A.C" },
+  { year: "2019", text: "Expansión estratégica a cobertura nacional con presencia física en 6 regiones clave del Perú." },
+  { year: "2021", text: "Consolidación de la red de distribución institucional con más de 500 clientes atendidos." },
+  { year: "2026", text: "Consolidación como plataforma integral de Market Access para la comercialización de fabricantes internacionales en salud B2B, B2C y B2G." },
 ];
 
 const stores = [
