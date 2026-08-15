@@ -73,7 +73,7 @@ const BeforeAfter = () => {
               {mode === "antes" ? <AlertTriangle className="h-6 w-6" aria-hidden="true" /> : <CheckCircle2 className="h-6 w-6" aria-hidden="true" />}
             </span>
             <h3 className="mt-6 font-display text-2xl font-semibold text-secondary">
-              {mode === "antes" ? "Coordinar no es escalar" : "Una ruta coordinada para empezar a vender"}
+              {mode === "antes" ? "Coordinar no es escalar" : "Una ruta coordinada para empezar a comercializar"}
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {mode === "antes"
