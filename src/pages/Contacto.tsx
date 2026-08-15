@@ -107,10 +107,10 @@ const Contacto = () => {
 
           <aside className="space-y-4">
             {[
-              { icon: Mail, label: "Correo", value: "contacto@ataogroup.pe", href: "mailto:contacto@ataogroup.pe" },
-              { icon: Phone, label: "Teléfono / WhatsApp", value: "+51 986 722 623", href: "tel:+51986722623" },
+              { icon: Mail, label: "Correo", value: "contacto@ataogroup.com", href: "mailto:contacto@ataogroup.com" },
+              { icon: Phone, label: "Teléfono / WhatsApp", value: "+51 986 733 623", href: "tel:+51986733623" },
               { icon: MapPin, label: "Ubicación", value: "Lima, Perú · Cobertura nacional" },
-              { icon: Clock, label: "Horario", value: "Lun a Vie: 8:00 – 18:00 · Sáb: 9:00 – 13:00" },
+              { icon: Clock, label: "Horario", value: "8 a.m. a 5 p.m." },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4 rounded-2xl border bg-card p-6 shadow-sm">
                 <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-primary-light text-primary">
