@@ -153,7 +153,16 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-3 lg:flex">
+            <Button asChild variant="outline" size="lg" className="rounded-full">
+              <a
+                href="https://qurago.odoo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ir a Tienda
+              </a>
+            </Button>
             <Button asChild variant="hero" size="lg" className="rounded-full">
               <Link to="/contacto">
                 Agenda una reunión
